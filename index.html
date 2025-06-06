@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5; url=https://reipur.dk">
+    <title>Redirecting...</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+    </style>
+    <script>
+      var seconds = 5;
+      function countdown() {
+        if (seconds > 0) {
+          document.getElementById('countdown').textContent = seconds;
+          seconds--;
+          setTimeout(countdown, 1000);
+        } else {
+          window.location.href = 'https://reipur.dk';
+        }
+      }
+      window.onload = countdown;
+    </script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my website.</p>
-    <p>My name is <strong>John Doe</strong>.</p>
-
+    <h1>You are being redirected to <a href="https://reipur.dk">reipur.dk</a>, the creator of this domain.</h1>
+    <p>Redirecting in <span id="countdown">5</span> seconds...</p>
+    <p>If you are not redirected automatically, click <a href="https://reipur.dk">here</a>.</p>
 </body>
 </html>
